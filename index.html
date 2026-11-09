@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <title>Our Gothic Grimoire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="cursor-heart" aria-hidden="true">♡</div>
+  <div class="cursor-trail-container" aria-hidden="true"></div>
+
+  <!-- LOADING SCREEN -->
+  <section id="loading-screen" class="screen-overlay" aria-live="polite">
+    <div class="loading-content">
+      <div class="loading-heart">♡</div>
+      <h1>Loading our story...</h1>
+      <p id="loading-text">Gathering memories...</p>
+      <div class="loading-bar"><div id="loading-progress"></div></div>
+      <p id="loading-percent">0%</p>
+    </div>
+  </section>
+
+  <!-- PASSWORD SCREEN -->
+  <section id="password-screen" class="screen-overlay" hidden>
+    <div class="gate-box">
+      <p class="eyebrow">A private little world</p>
+      <div class="ornament">────── ❦ ──────</div>
+      <h1>This world is private</h1>
+      <p>Enter the password to come inside.</p>
+      <form id="password-form">
+        <input type="password" id="password" placeholder="Password" autocomplete="off" aria-label="Password">
+        <button class="gothic-button" type="submit">Enter</button>
+      </form>
+      <p id="wrong-password" role="alert"></p>
+    </div>
+  </section>
+
+  <!-- WELCOME SCREEN -->
+  <section id="welcome" class="screen-overlay" hidden>
+    <div class="gate-box">
+      <p class="eyebrow">27 June 2026</p>
+      <div class="ornament">────── ❦ ──────</div>
+      <h1>Happy Anniversary</h1>
+      <p>Made with love.</p>
+      <button class="gothic-button" id="enter-site" type="button">Enter our little world ♡</button>
+    </div>
+  </section>
+
+  <!-- MAIN WEBSITE -->
+  <div id="website" hidden>
+    <div class="gothic-frame">
+      <span class="frame-corner top-left">❦</span>
+      <span class="frame-corner top-right">❦</span>
+      <span class="frame-corner bottom-left">❦</span>
+      <span class="frame-corner bottom-right">❦</span>
+
+      <header class="site-header">
+        <p class="eyebrow">A collection of things meant only for you</p>
+        <h1>The Gothic Grimoire</h1>
+        <p class="subtitle">A little magic, a little mystery, and all my love.</p>
+        <div class="ornament">────── ❦ ──────</div>
+      </header>
+
+      <nav class="navigation" aria-label="Main navigation">
+        <button class="nav-button active" data-page="home">Home</button>
+        <button class="nav-button" data-page="memories">Our Story</button>
+        <button class="nav-button" data-page="tarot">The Cards</button>
+        <button class="nav-button" data-page="raven">The Raven</button>
+        <button class="nav-button" data-page="chest">Treasure Chest</button>
+        <button class="nav-button" data-page="scratch">Surprise</button>
+        <button class="nav-button" data-page="daily">A Note for You</button>
+      </nav>
+
+      <main>
+        <!-- HOME -->
+        <section class="page active" id="home">
+          <div class="gothic-box welcome-box">
+            <p class="eyebrow">To my favourite person</p>
+            <h2>You've found your way here.</h2>
+            <p>There are little things hidden throughout this place. Take your time, follow the raven, and see what you find.</p>
+            <div class="ornament">✦ ❦ ✦</div>
+            <p class="home-footer">Somewhere between the stars and the shadows, there is you.</p>
+          </div>
+
+          <div class="home-grid">
+            <button class="feature-card" data-go="memories">
+              <span class="feature-symbol">♡</span>
+              <span class="feature-title">Our Story</span>
+              <span>Little pieces of us.</span>
+            </button>
+            <button class="feature-card" data-go="tarot">
+              <span class="feature-symbol">☾</span>
+              <span class="feature-title">The Tarot</span>
+              <span>Three cards await.</span>
+            </button>
+            <button class="feature-card" data-go="raven">
+              <span class="feature-symbol">𓅨</span>
+              <span class="feature-title">The Raven</span>
+              <span>A messenger has something to deliver.</span>
+            </button>
+            <button class="feature-card" data-go="chest">
+              <span class="feature-symbol">♜</span>
+              <span class="feature-title">The Chest</span>
+              <span>Something is locked away inside.</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- OUR STORY -->
+        <section class="page" id="memories">
+          <div class="gothic-box">
+            <p class="eyebrow">A little archive of us</p>
+            <h2>Our Story</h2>
+
+            <div class="story-grid">
+              <article>
+                <h3>Our First Date</h3>
+                <p><strong>27th June, 2026</strong></p>
+                <p>I remember sitting in that cafe and feeling so free and happy.</p>
+              </article>
+
+              <article>
+                <h3>My Favourite Memory</h3>
+                <p>The last night on our Goa trip. We had the best night; a tub bath, breezers and a night full of reels.</p>
+              </article>
+            </div>
+
+            <h3 class="center">Things I Love About You</h3>
+
+            <div class="love-list">
+              <p>♡ Your head dent</p>
+              <p>♡ Your eyes</p>
+              <p>♡ The way you jump when you're excited</p>
+              <p>♡ Your smile</p>
+              <p>♡ Your lips</p>
+              <p>♡ Everything that makes you you</p>
+            </div>
+
+            <div class="letter-box">
+              <h3>A Letter For You</h3>
+              <p>My Dearest, Alayna,</p>
+              <p>I'm not sure if I've told you this before but, <em>A chuisle mo chroí</em>. It is a saying in Irish; it means you are the pulse of my heart. I don't mean you are in my heart, no, you are the very beating of it. You are the blood flowing inside, systolic and diastolic action.</p>
+              <p>I can't begin to thank you and tell you how grateful I am that you are in my life. You add colour to my world, my life, and my soul. My very essence craves you like no other. Even if you're 500 miles away, my mind will remember and, if not, then my soul will.</p>
+              <p>I don't think it's coincidence we met. I believe that we've met before, in another time and another life. In every single one we have found each other, because no one else could fit the soulmate criteria like we do. Thank you for being in my life.</p>
+              <p>Forever yours.</p>
+              <p>— Kaitlyn</p>
+            </div>
+
+            <!-- GARDEN -->
+            <!-- =====================================================================
+  OUR LOVE — seeds, a few drops of water, then a bouquet blooms.
+  Paste this whole block wherever you want it in your page.
+  Everything is prefixed "gb-" so it won't clash with your own CSS/JS.
+  No libraries needed.
+====================================================================== -->
+
+<section class="gb-section" id="our-love" aria-label="Our Love">
+  <div class="gb-stage" id="gb-stage">
+    <svg id="gb-svg" viewBox="0 0 600 760" role="img"
+         aria-label="Seeds in dark soil. Press the Our Love button to water them and watch roses, lilies and snapdragons bloom."></svg>
+  </div>
+  <button class="gb-btn" id="gb-btn" type="button" aria-pressed="false">Our Love</button>
+</section>
+
+<style>
+  .gb-section {
+    --gb-stem: #24402f;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    gap: 1.5rem;
+    padding: clamp(1.5rem, 4vw, 3rem) 1rem 2.5rem;
+    background: radial-gradient(ellipse at 50% 30%, #1d0c2e 0%, #09050d 72%);
+    color: #e9d6ff;
+  }
+  .gb-stage { width: min(94vw, 540px); }
+  .gb-stage svg { display: block; width: 100%; height: auto; overflow: visible; }
+
+  /* ---------- button ---------- */
+  .gb-btn {
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    letter-spacing: .12em;
+    padding: .8em 2.6em;
+    color: #efe1ff;
+    background: #0d070e;
+    border: 1px solid #9b6bff;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: box-shadow .3s ease, border-color .3s ease, transform .2s ease;
+  }
+  .gb-btn:hover { border-color: #d02244; box-shadow: 0 0 22px rgba(208, 34, 68, .55); }
+  .gb-btn:active { transform: scale(.97); }
+  .gb-btn:focus-visible { outline: 2px solid #dcc8ff; outline-offset: 4px; }
+
+  /* ---------- seeds, soil, water ---------- */
+  .gb-seed { transform-box: fill-box; transform-origin: center; }
+  .gb-go .gb-seed { animation: gb-seed 1.1s ease 1.7s forwards; }
+  @keyframes gb-seed {
+    0%   { transform: scale(1); }
+    40%  { transform: scale(1.35); fill: #7a4a30; }
+    100% { transform: scale(.3); opacity: 0; }
+  }
+  .gb-wet { opacity: 0; transition: opacity 1.4s ease .9s; }
+  .gb-go .gb-wet { opacity: .45; }
+
+  .gb-drop { opacity: 0; }
+  .gb-go .gb-drop { animation: gb-fall 1s cubic-bezier(.5, 0, .9, .6) var(--d) forwards; }
+  @keyframes gb-fall {
+    0%   { transform: translateY(-640px); opacity: 0; }
+    12%  { opacity: 1; }
+    88%  { opacity: 1; }
+    100% { transform: translateY(0); opacity: 0; }
+  }
+  .gb-rip { opacity: 0; transform-box: fill-box; transform-origin: center; }
+  .gb-go .gb-rip { animation: gb-rip 1s ease-out var(--d) forwards; }
+  @keyframes gb-rip {
+    0%   { opacity: .9; transform: scale(.3); }
+    100% { opacity: 0; transform: scale(5); }
+  }
+
+  /* ---------- growth ---------- */
+  .gb-stem {
+    fill: none; stroke: var(--gb-stem); stroke-width: 6;
+    stroke-dasharray: 1; stroke-dashoffset: 1;
+    transition: stroke-dashoffset 2s cubic-bezier(.35, .6, .25, 1) var(--d, 0s);
+  }
+  .gb-go .gb-stem { stroke-dashoffset: 0; }
+
+  .gb-leaf {
+    fill: #2f4a3a; stroke: #1b2c22; stroke-width: 1;
+    transform: scale(0);
+    transition: transform .9s cubic-bezier(.3, 1.4, .4, 1) var(--d, 0s);
+  }
+  .gb-go .gb-leaf { transform: scale(1); }
+
+  /* ---------- blooming ---------- */
+  .gb-ring {
+    transform: scale(.04) rotate(-50deg); opacity: 0;
+    transition: transform 1.5s cubic-bezier(.2, .9, .25, 1.15), opacity .6s ease;
+    transition-delay: calc(var(--bd) + (4 - var(--k)) * .2s);   /* inner petals first, outer last */
+  }
+  .gb-go .gb-ring { transform: scale(1) rotate(0deg); opacity: 1; }
+
+  .gb-pt {
+    transform: scale(.05); opacity: 0;
+    transition: transform 1.3s cubic-bezier(.2, .9, .3, 1.2), opacity .5s ease;
+    transition-delay: calc(var(--bd) + var(--k) * .12s);
+  }
+  .gb-go .gb-pt { transform: scale(1); opacity: 1; }
+
+  .gb-pop {
+    transform: scale(0);
+    transition: transform .9s cubic-bezier(.3, 1.5, .4, 1) calc(var(--bd) + var(--j, 0) * .15s);
+  }
+  .gb-go .gb-pop { transform: scale(1); }
+
+  .gb-halo { opacity: 0; transition: opacity 3s ease 5s; }
+  .gb-go .gb-halo { opacity: 1; }
+
+  /* gentle sway once everything has bloomed */
+  .gb-done .gb-sway { transform-origin: 300px 720px; animation: gb-sway 7s ease-in-out infinite alternate; }
+  @keyframes gb-sway { from { transform: rotate(-1.1deg); } to { transform: rotate(1.1deg); } }
+
+  /* replay reset: snap back to seeds instantly */
+  .gb-reset, .gb-reset * { transition: none !important; animation: none !important; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gb-stage * { transition-duration: .01s !important; transition-delay: 0s !important;
+                  animation-duration: .01s !important; animation-delay: 0s !important; }
+    .gb-done .gb-sway { animation: none !important; }
+  }
+</style>
+
+<script>
+(function () {
+  var stage = document.getElementById('gb-stage'),
+      svg   = document.getElementById('gb-svg'),
+      btn   = document.getElementById('gb-btn');
+  if (!stage || !svg || !btn) return;
+
+  /* ---------- colours: edit freely ---------- */
+  var PAL = {
+    red:    { b: '#5a0719', m: '#a3122f', l: '#e23a5a', h: '#ff9db0', t: '#2a0710' },
+    violet: { b: '#240a52', m: '#5b25b0', l: '#a56bff', h: '#dcc8ff', t: '#1a0a2e' },
+    black:  { b: '#050307', m: '#1b1322', l: '#43344f', h: '#a08cb8', t: '#c9a8ff' }
+  };
+
+  /* ---------- the bouquet: seed x, flower position, size ----------
+     k = rose | lily | snap   c = red | violet | black
+     Add or remove lines to change how many flowers grow. */
+  var PLANTS = [
+    { k: 'snap', c: 'violet', sx: 180, tx: 70,  ty: 190 },
+    { k: 'lily', c: 'black',  sx: 210, tx: 150, ty: 385, s: 1.3, r: -26 },
+    { k: 'rose', c: 'black',  sx: 238, tx: 212, ty: 420, s: 1.45 },
+    { k: 'rose', c: 'violet', sx: 266, tx: 238, ty: 320, s: 1.45 },
+    { k: 'lily', c: 'violet', sx: 322, tx: 300, ty: 150, s: 1.35 },
+    { k: 'rose', c: 'red',    sx: 294, tx: 300, ty: 245, s: 1.8 },
+    { k: 'rose', c: 'black',  sx: 350, tx: 362, ty: 320, s: 1.45 },
+    { k: 'rose', c: 'violet', sx: 378, tx: 388, ty: 420, s: 1.45 },
+    { k: 'lily', c: 'red',    sx: 406, tx: 450, ty: 385, s: 1.3, r: 26 },
+    { k: 'snap', c: 'red',    sx: 432, tx: 530, ty: 190 }
+  ];
+  var DROPS = [236, 292, 348, 398];   /* x positions of the water drops */
+
+  /* ---------- helpers ---------- */
+  function f(n) { return n.toFixed(1); }
+  function bz(P, t) {
+    var u = 1 - t;
+    return [0, 1].map(function (i) {
+      return u*u*u*P[0][i] + 3*u*u*t*P[1][i] + 3*u*t*t*P[2][i] + t*t*t*P[3][i];
+    });
+  }
+  function ang(P, t) {
+    var u = 1 - t, d = [0, 1].map(function (i) {
+      return 3*u*u*(P[1][i]-P[0][i]) + 6*u*t*(P[2][i]-P[1][i]) + 3*t*t*(P[3][i]-P[2][i]);
+    });
+    return Math.atan2(d[1], d[0]) * 180 / Math.PI;
+  }
+  function seedY(x) { var t = (x - 90) / 420; return 760 - 240 * t * (1 - t); }  /* soil surface */
+
+  /* ---------- a rose: five rings of rounded, shaded petals + spiral heart ---------- */
+  function petal(L, W) {
+    return 'M0,0C' + (-W) + ',' + (-L*.3) + ' ' + (-W*1.05) + ',' + (-L*.9) + ' ' + (-W*.35) + ',' + (-L*.99) +
+           'Q0,' + (-L*1.1) + ' ' + (W*.35) + ',' + (-L*.99) +
+           'C' + (W*1.05) + ',' + (-L*.9) + ' ' + W + ',' + (-L*.3) + ' 0,0Z';
+  }
+  var RINGS = [ /* petals, length, width, twist */
+    [8, 46, 21, 0], [7, 38, 18, 13], [6, 30, 15, 27], [5, 22, 12, 9], [4, 14, 9, 31]
+  ];
+  function rose(c) {
+    var P = PAL[c], s = '<g class="gb-pop" style="--j:-3">';
+    for (var i = 0; i < 5; i++)
+      s += '<path d="M0,0Q-8,-26 0,-54Q8,-26 0,0Z" fill="#2f4a3a" transform="rotate(' + (i*72 + 18) + ')"/>';
+    s += '</g>';
+    RINGS.forEach(function (r, k) {
+      s += '<g class="gb-ring" style="--k:' + k + '">';
+      if (k === 0) s += '<circle r="44" fill="' + P.b + '" opacity=".7"/>';
+      for (var j = 0; j < r[0]; j++) {
+        s += '<g transform="rotate(' + (r[3] + j * 360 / r[0]) + ')">' +
+             '<path d="' + petal(r[1], r[2]) + '" fill="url(#gb-p-' + c + ')" stroke="' + P.b + '" stroke-width=".7"/>' +
+             '<path d="M' + (-r[2]*.7) + ',' + (-r[1]*.8) + 'Q0,' + (-r[1]*1.06) + ' ' + (r[2]*.7) + ',' + (-r[1]*.8) +
+             '" fill="none" stroke="' + P.h + '" stroke-width="1.3" stroke-linecap="round" opacity=".6"/>' +
+             '<path d="M0,-4L0,' + (-r[1]*.6) + '" stroke="' + P.b + '" stroke-width=".7" opacity=".35"/></g>';
+      }
+      if (k === 4)
+        s += '<circle r="4.5" fill="' + P.m + '"/><path d="M-3,0A3,3 0 1 1 3,0A5,5 0 1 1 -5,0" fill="none" stroke="' + P.h + '" stroke-width=".9" opacity=".6"/>';
+      s += '</g>';
+    });
+    return s;
+  }
+
+  /* ---------- a lily ---------- */
+  function lily(c) {
+    var P = PAL[c], s = '';
+    for (var i = 0; i < 6; i++)
+      s += '<g transform="rotate(' + (i*60) + ')"><g class="gb-pt" style="--k:' + i + '">' +
+           '<path d="M0,0Q-17,-34 0,-76Q17,-34 0,0Z" fill="url(#gb-p-' + c + ')" stroke="' + P.h + '" stroke-width=".8" stroke-opacity=".6"/>' +
+           '<path d="M0,-6L0,-60" stroke="' + P.h + '" stroke-width="1" opacity=".5"/></g></g>';
+    s += '<g class="gb-pt" style="--k:5">';
+    [[-10, -30], [3, -34], [14, -26]].forEach(function (p) {
+      s += '<path d="M0,0L' + p[0] + ',' + p[1] + '" stroke="' + P.h + '" stroke-width="1.6" stroke-linecap="round"/>' +
+           '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="3.2" fill="#d02244"/>';
+    });
+    return s + '</g>';
+  }
+
+  /* ---------- a snapdragon spike: blossoms pop from the bottom up ---------- */
+  function snap(c, P4) {
+    var P = PAL[c], s = '', n = 9;
+    for (var i = 0; i < n; i++) {
+      var t = .42 + i * (.56 / (n - 1)), p = bz(P4, t), a = ang(P4, t) + 90, sc = 1.45 - .1 * i;
+      s += '<g transform="translate(' + f(p[0]) + ' ' + f(p[1]) + ') rotate(' + f(a * .8) + ') scale(' + f((i % 2 ? -1 : 1) * sc) + ' ' + f(sc) + ')">' +
+           '<g class="gb-pop" style="--j:' + i + '">' +
+           '<path d="M0,0Q-8,-18 8,-22Q24,-20 22,-6Q10,-2 0,0Z" fill="' + P.l + '" stroke="' + P.h + '" stroke-width=".8"/>' +
+           '<path d="M0,0Q12,3 24,-4Q27,12 11,16Q-3,11 0,0Z" fill="' + P.m + '" stroke="' + P.h + '" stroke-width=".8"/>' +
+           '<ellipse cx="10" cy="-3" rx="6" ry="3.5" fill="' + P.t + '"/></g></g>';
+    }
+    var tip = bz(P4, 1);
+    return s + '<g transform="translate(' + f(tip[0]) + ' ' + f(tip[1]) + ')"><g class="gb-pop" style="--j:9">' +
+           '<ellipse cy="-6" rx="4" ry="8" fill="' + P.m + '" stroke="' + P.h + '" stroke-width=".8"/></g></g>';
+  }
+
+  /* ---------- build the scene ---------- */
+  var defs = '';
+  for (var n in PAL) {
+    defs += '<linearGradient id="gb-p-' + n + '" x1="0" y1="1" x2="0" y2="0">' +
+            '<stop offset="0" stop-color="' + PAL[n].b + '"/><stop offset=".55" stop-color="' + PAL[n].m + '"/>' +
+            '<stop offset="1" stop-color="' + PAL[n].l + '"/></linearGradient>';
+  }
+  defs += '<radialGradient id="gb-halo"><stop offset="0" stop-color="#9b6bff" stop-opacity=".28"/><stop offset="1" stop-color="#9b6bff" stop-opacity="0"/></radialGradient>' +
+          '<linearGradient id="gb-soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a2e38"/><stop offset="1" stop-color="#1a0d14"/></linearGradient>' +
+          '<linearGradient id="gb-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3ecff"/><stop offset="1" stop-color="#7d8cf0"/></linearGradient>';
+
+  var stems = '', leaves = '', lilies = '', snaps = '', seeds = '', roses = [];
+  PLANTS.forEach(function (p, i) {
+    var sy = seedY(p.sx),
+        P4 = [[p.sx, sy], [p.sx, sy - 190], [p.tx, p.ty + 250], [p.tx, p.ty]],
+        sd = 2.4 + i * .28,                          /* when this stem starts growing */
+        bd = (sd + (p.k === 'snap' ? .9 : 1.9)).toFixed(2) + 's',   /* when it starts to bloom */
+        tr = 'translate(' + p.tx + ' ' + p.ty + ') rotate(' + (p.r || 0) + ') scale(' + (p.s || 1) + ')';
+
+    stems += '<path class="gb-stem" pathLength="1" style="--d:' + sd.toFixed(2) + 's" d="M' + P4[0] + 'C' + P4[1] + ' ' + P4[2] + ' ' + P4[3] + '"/>';
+
+    [.2, .38, .56].forEach(function (t, j) {
+      var q = bz(P4, t), a = ang(P4, t) + (j % 2 ? -58 : 58);
+      leaves += '<g transform="translate(' + f(q[0]) + ' ' + f(q[1]) + ') rotate(' + f(a) + ')">' +
+                '<path class="gb-leaf" style="--d:' + (sd + t * 1.5).toFixed(2) + 's" d="M0,0Q24,-15 58,0Q24,15 0,0Z"/></g>';
+    });
+    if (p.k === 'rose') [.46, .68].forEach(function (t, j) {   /* gothic thorns */
+      var q = bz(P4, t), a = ang(P4, t) + (j % 2 ? -80 : 80);
+      leaves += '<g transform="translate(' + f(q[0]) + ' ' + f(q[1]) + ') rotate(' + f(a) + ')">' +
+                '<path class="gb-leaf" style="--d:' + (sd + t * 1.6).toFixed(2) + 's" d="M0,-3L12,0L0,3Z"/></g>';
+    });
+
+    if (p.k === 'rose')
+      roses.push({ y: p.ty, h: '<g transform="' + tr + '" style="--bd:' + bd + '">' + rose(p.c) + '</g>' });
+    else if (p.k === 'lily')
+      lilies += '<g transform="' + tr + '" style="--bd:' + bd + '">' + lily(p.c) + '</g>';
+    else
+      snaps += '<g style="--bd:' + bd + '">' + snap(p.c, P4) + '</g>';
+
+    seeds += '<ellipse class="gb-seed" cx="' + p.sx + '" cy="' + f(sy + 2) + '" rx="7" ry="4.3" fill="#3b2418" stroke="#7a4a30" stroke-width="1"/>';
+  });
+  roses.sort(function (a, b) { return a.y - b.y; });
+
+  var mound = 'M90,760Q300,640 510,760Z', drops = '';
+  DROPS.forEach(function (x, k) {
+    var y = seedY(x) - 6, d = .1 + k * .5;
+    drops += '<g transform="translate(' + x + ' ' + f(y) + ')"><path class="gb-drop" style="--d:' + d.toFixed(2) + 's" d="M0,-14C6,-5 8,1 0,8C-8,1 -6,-5 0,-14Z" fill="url(#gb-water)"/></g>' +
+             '<ellipse class="gb-rip" style="--d:' + (d + .85).toFixed(2) + 's" cx="' + x + '" cy="' + f(y + 7) + '" rx="5" ry="1.8" fill="none" stroke="#b9c8ff" stroke-width="1"/>';
+  });
+
+  svg.innerHTML =
+    '<defs>' + defs + '</defs>' +
+    '<circle class="gb-halo" cx="300" cy="280" r="310" fill="url(#gb-halo)"/>' +
+    '<g class="gb-sway">' + stems + leaves + lilies + snaps + roses.map(function (r) { return r.h; }).join('') + '</g>' +
+    '<path d="' + mound + '" fill="url(#gb-soil)"/>' +
+    '<path class="gb-wet" d="' + mound + '" fill="#000"/>' +
+    seeds + drops;
+
+  /* ---------- the button: bloom, click again to start over ---------- */
+  var timer;
+  btn.addEventListener('click', function () {
+    clearTimeout(timer);
+    if (stage.classList.contains('gb-go')) {
+      stage.classList.add('gb-reset');
+      stage.classList.remove('gb-go', 'gb-done');
+      void stage.offsetWidth;                       /* flush so the reset is instant */
+      stage.classList.remove('gb-reset');
+      btn.setAttribute('aria-pressed', 'false');
+      return;
+    }
+    stage.classList.add('gb-go');
+    btn.setAttribute('aria-pressed', 'true');
+    timer = setTimeout(function () { stage.classList.add('gb-done'); }, 9500);
+  });
+})();
+</script>
+
+            <!-- MEMORY GAME -->
+            <div id="anniversary-memory-game">
+              <h3>Our Little Memory Game</h3>
+              <p>Find all the matching pairs ♡</p>
+              <div id="anniversary-memory-grid"></div>
+              <p id="anniversary-memory-status" aria-live="polite">Find the matching pairs!</p>
+              <button class="gothic-button" id="anniversary-memory-reset" type="button">Play Again</button>
+            </div>
+
+            <!-- QUIZ -->
+            <div id="quiz">
+              <h3>How well do you know us?</h3>
+              <p class="section-intro">Let's see if you remember our little story.</p>
+
+              <div class="quiz-box">
+                <div class="quiz-question">
+                  <h3>1. Who fell first?</h3>
+                  <button data-q="1" data-a="a">You</button>
+                  <button data-q="1" data-a="b">Me</button>
+                  <button data-q="1" data-a="c">Neither</button>
+                  <button data-q="1" data-a="d">God knows</button>
+                </div>
+
+                <div class="quiz-question">
+                  <h3>2. What is our perfect date?</h3>
+                  <button data-q="2" data-a="a">Fancy dinner</button>
+                  <button data-q="2" data-a="b">Movie night</button>
+                  <button data-q="2" data-a="c">Just being together</button>
+                  <button data-q="2" data-a="d">A huge party</button>
+                </div>
+
+                <div class="quiz-question">
+                  <h3>3. Who is more dramatic?</h3>
+                  <button data-q="3" data-a="a">You</button>
+                  <button data-q="3" data-a="b">Me</button>
+                  <button data-q="3" data-a="c">Both of us</button>
+                  <button data-q="3" data-a="d">Absolutely neither</button>
+                </div>
+
+                <div class="quiz-question">
+                  <h3>4. What matters most?</h3>
+                  <button data-q="4" data-a="a">The memories</button>
+                  <button data-q="4" data-a="b">The photos</button>
+                  <button data-q="4" data-a="c">The gifts</button>
+                  <button data-q="4" data-a="d">Us</button>
+                </div>
+
+                <p id="quiz-result" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <!-- SONG -->
+            <div class="center song-area">
+              <button class="gothic-button" id="play-song" type="button">Play our song 🎵</button>
+              <audio id="ourSong" controls preload="none">
+                <source src="song.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+
+            <!-- SECRET MESSAGE -->
+            <div class="center">
+              <h3>I have one more thing to tell you...</h3>
+              <button class="gothic-button" id="reveal-secret" type="button">Open the secret ♡</button>
+
+              <p id="secretMessage" class="secret-message hidden">
+                I told you that you changed my life but I never told you how. Since the beginning, you came into my life and made me a better person. You helped me regain the ambition I have today, you helped me like myself a little more, and you helped me deal with so much. But most of all, you stayed. Thank you ♡
+              </p>
+            </div>
+
+            <!-- FINAL MESSAGE -->
+            <div class="ending center">
+              <h3>One Last Thing...</h3>
+              <button class="gothic-button" id="final-button" type="button">Open this ♡</button>
+              <div id="final" class="hidden">
+                <h2>I love you.</h2>
+                <p>Happy anniversary.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAROT -->
+        <section class="page" id="tarot">
+          <div class="gothic-box">
+            <p class="eyebrow">Three cards. One little reading.</p>
+            <h2>The Cards Have Chosen</h2>
+            <p class="section-intro">Turn over each card and see what it has to say.</p>
+
+            <div class="tarot-grid">
+              <button class="tarot-card">
+                <span class="card-back">☾</span>
+                <span class="card-front">
+                  <span class="card-number">XIX</span>
+                  <span class="card-art">☀</span>
+                  <strong>The Sun</strong>
+                  <span class="card-meaning">Warmth, joy, and the light you bring.</span>
+                </span>
+              </button>
+
+              <button class="tarot-card">
+                <span class="card-back">✦</span>
+                <span class="card-front">
+                  <span class="card-number">XVIII</span>
+                  <span class="card-art">☾</span>
+                  <strong>The Moon</strong>
+                  <span class="card-meaning">Mystery, dreams, and everything beneath the surface.</span>
+                </span>
+              </button>
+
+              <button class="tarot-card">
+                <span class="card-back">❦</span>
+                <span class="card-front">
+                  <span class="card-number">VI</span>
+                  <span class="card-art">♡</span>
+                  <strong>The Lovers</strong>
+                  <span class="card-meaning">Devotion, connection, and choosing each other.</span>
+                </span>
+              </button>
+            </div>
+
+            <p id="tarot-caption" class="tarot-caption">Choose a card to reveal its meaning.</p>
+            <button class="gothic-button" id="shuffle-tarot" type="button">Turn all cards back</button>
+
+            <div class="secret-divider">
+              <h3>A secret hidden in plain sight</h3>
+              <button class="secret-seal" id="secret-seal" type="button">✦ Break the seal ✦</button>
+              <p id="secret-message" class="secret-message hidden">If I had to find you in a thousand lifetimes, I would.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- RAVEN -->
+        <section class="page" id="raven">
+          <div class="gothic-box">
+            <p class="eyebrow">A messenger from the shadows</p>
+            <h2>The Raven's Deliveries</h2>
+            <p class="section-intro">Call for the raven. It has something for you.</p>
+
+            <div class="raven-stage">
+              <div class="raven-flight" id="raven-flight">𓅨</div>
+              <div class="dropped-item hidden" id="dropped-item">✉</div>
+            </div>
+
+            <div class="raven-letter">
+              <span class="letter-decoration">❦</span>
+              <p id="raven-note">The raven has not delivered anything yet.</p>
+              <span class="letter-decoration">❦</span>
+            </div>
+
+            <p id="raven-counter" class="raven-counter">Three messages remain.</p>
+            <button class="gothic-button" id="raven-button" type="button">Call the raven</button>
+
+            <p id="key-notice" class="key-notice hidden">The raven has left you something special: a key to the treasure chest.</p>
+
+            <div id="gothic-key" class="gothic-key hidden">
+              <span class="key-symbol">⚿</span>
+              <span class="key-label">The Gothic Key</span>
+              <span class="key-description">A gift from your raven.</span>
+            </div>
+
+            <button class="gothic-button secondary-button" id="raven-reset" type="button">Reset the raven's deliveries</button>
+          </div>
+        </section>
+
+        <!-- TREASURE CHEST -->
+        <section class="page" id="chest">
+          <div class="gothic-box">
+            <p class="eyebrow">A little treasure, kept under lock and key</p>
+            <h2>The Treasure Chest</h2>
+            <p id="chest-intro" class="section-intro">The chest is locked. The raven may know where the key is.</p>
+
+            <div id="treasure-chest" class="treasure-chest locked">
+              <div class="chest-lid"></div>
+              <div class="chest-body">
+                <span class="chest-emblem">✦</span>
+                <span id="chest-lock" class="chest-lock">🔒</span>
+              </div>
+              <div class="chest-label">A treasure for you</div>
+            </div>
+
+            <p id="chest-status" class="chest-status">You need the raven's gothic key.</p>
+            <button id="chest-button" class="gothic-button" type="button" disabled>The chest is locked</button>
+
+            <div id="coupon-area" class="coupon-area hidden">
+              <div class="ornament">────── ❦ ──────</div>
+              <h3>Your Little Coupons</h3>
+              <p>Each one is yours to redeem.</p>
+
+              <div class="coupon-list">
+                <article class="coupon">
+                  <span class="coupon-number">I</span>
+                  <p>One free back massage</p>
+                  <button class="coupon-redeem">Redeem</button>
+                </article>
+
+                <article class="coupon">
+                  <span class="coupon-number">II</span>
+                  <p>One free kiss</p>
+                  <button class="coupon-redeem">Redeem</button>
+                </article>
+
+                <article class="coupon">
+                  <span class="coupon-number">III</span>
+                  <p>One free hug</p>
+                  <button class="coupon-redeem">Redeem</button>
+                </article>
+
+                <article class="coupon">
+                  <span class="coupon-number">IV</span>
+                  <p>One free coupon for full control of my body</p>
+                  <button class="coupon-redeem">Redeem</button>
+                </article>
+              </div>
+
+              <p class="coupon-footnote">A little promise, sealed with love.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SCRATCH CARD -->
+        <section class="page" id="scratch">
+          <div class="gothic-box">
+            <p class="eyebrow">A hidden little surprise</p>
+            <h2>Scratch to Reveal</h2>
+            <p class="section-intro">Use your finger or mouse to scratch away the darkness.</p>
+
+            <div class="scratch-wrap">
+              <div class="scratch-message">
+                <span class="scratch-star">✦</span>
+                <h3>My favourite place is beside you.</h3>
+                <p>Always.</p>
+              </div>
+              <canvas id="scratch-canvas"></canvas>
+            </div>
+
+            <p class="scratch-hint">Scratch gently to reveal your message.</p>
+            <button id="scratch-reset" class="gothic-button" type="button">Cover it again</button>
+          </div>
+        </section>
+
+        <!-- DAILY NOTE -->
+        <section class="page" id="daily">
+          <div class="gothic-box">
+            <p class="eyebrow">A note, just for today</p>
+            <h2>A Little Love Letter</h2>
+
+            <div class="daily-note">
+              <span class="letter-decoration">❦</span>
+              <p id="daily-message"></p>
+              <span class="daily-signature">Yours, always.</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="ornament">────── ❦ ──────</div>
+        <p>Made with love, and a little bit of darkness.</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
